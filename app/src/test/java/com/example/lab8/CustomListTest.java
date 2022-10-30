@@ -39,15 +39,13 @@ public class CustomListTest {
     @Test
     public void hasCityTest(){
         list = MockCityList();
-        City calgary = new City("Calgary", "AB");
-        list.add(calgary);
-        assertEquals(Boolean.TRUE, list.hasCity(calgary));
+        City estevan = new City("Estevan", "SK");
+        list.addCity(estevan);
+        assertEquals(Boolean.TRUE, list.hasCity(estevan));
 
-        City toronto = new City("Toronto", "ON");
-        assertEquals(Boolean.FALSE, list.hasCity(toronto));
+        City redDeer = new City("Red Deer", "AB");
+        assertEquals(Boolean.FALSE, list.hasCity(redDeer));
 
-        list.add(toronto);
-        assertEquals(Boolean.TRUE, list.hasCity(toronto));
     }
 
 
